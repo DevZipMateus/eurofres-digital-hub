@@ -46,27 +46,27 @@ const Header = () => {
           : "bg-background/80 backdrop-blur-sm"
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           <button 
             onClick={() => scrollToSection("hero")}
-            className="flex items-center gap-3 transition-transform hover:scale-105"
+            className="flex items-center gap-2 sm:gap-3 transition-transform hover:scale-105"
             aria-label="Ir para o início"
           >
             <img 
               src={logoEurofres} 
               alt="Eurofres Logo" 
-              className="h-12 w-auto"
+              className="h-10 sm:h-12 w-auto"
             />
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-accent font-medium transition-colors relative group"
+                className="text-foreground hover:text-accent font-medium transition-colors relative group text-sm xl:text-base"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
@@ -74,7 +74,8 @@ const Header = () => {
             ))}
             <Button
               onClick={() => scrollToSection("contact")}
-              className="bg-accent text-accent-foreground hover:bg-accent/90"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 text-sm xl:text-base"
+              size="sm"
             >
               Orçamento
             </Button>
@@ -83,29 +84,30 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-foreground p-2"
+            className="lg:hidden text-foreground p-2 hover:bg-muted rounded-md transition-colors"
             aria-label="Menu de navegação"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-border animate-fade-in">
-            <div className="flex flex-col gap-4">
+          <nav className="lg:hidden py-4 border-t border-border animate-fade-in">
+            <div className="flex flex-col gap-2">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-foreground hover:text-accent font-medium transition-colors text-left px-4 py-2"
+                  className="text-foreground hover:text-accent hover:bg-muted font-medium transition-colors text-left px-4 py-3 rounded-md"
                 >
                   {item.label}
                 </button>
               ))}
               <Button
                 onClick={() => scrollToSection("contact")}
-                className="bg-accent text-accent-foreground hover:bg-accent/90 mx-4"
+                className="bg-accent text-accent-foreground hover:bg-accent/90 mx-4 mt-2"
+                size="sm"
               >
                 Orçamento
               </Button>
