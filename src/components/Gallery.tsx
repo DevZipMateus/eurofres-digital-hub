@@ -19,6 +19,11 @@ import maquinario from "@/assets/gallery/maquinario.jpg";
 import maquinarioCnc from "@/assets/gallery/maquinario-cnc.jpg";
 import afiacao from "@/assets/gallery/afiacao.jpg";
 import serraCircular from "@/assets/gallery/serra-circular.jpg";
+import maquinaAfiacao from "@/assets/gallery/maquina-afiacao.jpg";
+import fresasVariadas from "@/assets/gallery/fresas-variadas.jpg";
+import conjuntoFresas from "@/assets/gallery/conjunto-fresas.jpg";
+import detalheSerra from "@/assets/gallery/detalhe-serra.jpg";
+import discoSerraCompleto from "@/assets/gallery/disco-serra-completo.jpg";
 
 const galleryImages = [
   { src: entrada, alt: "Entrada Eurofres" },
@@ -30,6 +35,11 @@ const galleryImages = [
   { src: fresaTupia, alt: "Fresa para tupia" },
   { src: fresas, alt: "Fresas especializadas" },
   { src: serraCircular, alt: "Serra circular" },
+  { src: maquinaAfiacao, alt: "Máquina de afiação de precisão" },
+  { src: fresasVariadas, alt: "Variedade de fresas" },
+  { src: conjuntoFresas, alt: "Conjunto de fresas de diferentes tamanhos" },
+  { src: detalheSerra, alt: "Detalhe da serra circular afiada" },
+  { src: discoSerraCompleto, alt: "Disco de serra completo" },
 ];
 
 const Gallery = () => {
