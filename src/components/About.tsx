@@ -1,4 +1,6 @@
 import { Award, Target, TrendingUp } from "lucide-react";
+import maquinarioCnc from "@/assets/gallery/maquinario-cnc.jpg";
+import entrada from "@/assets/gallery/entrada.jpg";
 
 const About = () => {
   return (
@@ -23,9 +25,23 @@ const About = () => {
               <p className="text-foreground leading-relaxed text-sm sm:text-base">
                 Iniciando suas operações com apenas uma máquina de afiar serras, a Eurofres enfrentou os desafios comuns de uma empresa em recém-expansão, apoiada por uma experiência sólida na área de ferramentas de corte. Essa trajetória de aprendizado e aperfeiçoamento possibilitou conquistas importantes, incluindo, em 2002, a mudança para um prédio maior.
               </p>
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src={entrada} 
+                  alt="Fachada Eurofres" 
+                  className="w-full h-64 sm:h-80 object-cover"
+                />
+              </div>
             </div>
             
             <div className="space-y-5 sm:space-y-6 animate-fade-up">
+              <div className="rounded-xl overflow-hidden shadow-lg mb-5">
+                <img 
+                  src={maquinarioCnc} 
+                  alt="Maquinário CNC de precisão" 
+                  className="w-full h-64 sm:h-80 object-cover"
+                />
+              </div>
               <p className="text-foreground leading-relaxed text-sm sm:text-base">
                 Essa transferência permitiu ampliar sua estrutura, investir em novas máquinas e diversificar a capacidade de produção, consolidando sua atuação no mercado de afiação e ferramentas de alta precisão.
               </p>

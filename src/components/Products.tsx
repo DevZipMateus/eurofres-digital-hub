@@ -1,4 +1,8 @@
 import { Drill, CircleDot, Boxes, Wrench } from "lucide-react";
+import serraCircular from "@/assets/gallery/serra-circular.jpg";
+import discoSerraCompleto from "@/assets/gallery/disco-serra-completo.jpg";
+import conjuntoFresas from "@/assets/gallery/conjunto-fresas.jpg";
+import brocas from "@/assets/gallery/brocas.jpg";
 
 const Products = () => {
   const productCategories = [
@@ -60,6 +64,37 @@ const Products = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-12 animate-fade-up">
+            <div className="rounded-xl overflow-hidden shadow-lg group">
+              <img 
+                src={discoSerraCompleto} 
+                alt="Disco de serra circular completo" 
+                className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-lg group">
+              <img 
+                src={serraCircular} 
+                alt="Detalhe da serra circular" 
+                className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-lg group">
+              <img 
+                src={conjuntoFresas} 
+                alt="Conjunto de fresas variadas" 
+                className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-lg group">
+              <img 
+                src={brocas} 
+                alt="Brocas de precisão" 
+                className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
           </div>
 
           <div className="bg-secondary/50 rounded-2xl p-6 sm:p-8 lg:p-12 animate-fade-up">
