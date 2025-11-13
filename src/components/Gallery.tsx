@@ -112,14 +112,16 @@ const Gallery = () => {
         </div>
 
         <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-          <DialogContent className="max-w-[95vw] max-h-[95vh] p-2 sm:p-6 animate-scale-in">
-            {selectedImage && (
-              <img
-                src={selectedImage}
-                alt="Imagem ampliada"
-                className="w-full h-full object-contain animate-fade-in"
-              />
-            )}
+          <DialogContent className="max-w-[90vw] sm:max-w-[85vw] md:max-w-4xl max-h-[90vh] p-4 sm:p-6 animate-scale-in">
+            <div className="relative w-full h-full flex items-center justify-center">
+              {selectedImage && (
+                <img
+                  src={selectedImage}
+                  alt="Imagem ampliada"
+                  className="max-w-full max-h-[80vh] object-contain animate-fade-in"
+                />
+              )}
+            </div>
           </DialogContent>
         </Dialog>
       </div>
