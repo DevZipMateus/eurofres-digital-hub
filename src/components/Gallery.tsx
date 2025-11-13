@@ -71,19 +71,26 @@ const Gallery = () => {
           >
             <CarouselContent>
               {galleryImages.map((image, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem 
+                  key={index} 
+                  className="md:basis-1/2 lg:basis-1/3 animate-fade-in"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
                   <div className="p-2">
                     <Card 
-                      className="cursor-pointer hover:shadow-lg transition-shadow overflow-hidden group"
+                      className="cursor-pointer hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden group"
                       onClick={() => setSelectedImage(image.src)}
                     >
                       <CardContent className="p-0 aspect-square relative">
                         <img
                           src={image.src}
                           alt={image.alt}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         />
-                        <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/0 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <div className="absolute bottom-0 left-0 right-0 p-4 text-primary-foreground transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                          <p className="text-sm font-medium">{image.alt}</p>
+                        </div>
                       </CardContent>
                     </Card>
                   </div>
@@ -96,12 +103,12 @@ const Gallery = () => {
         </div>
 
         <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-          <DialogContent className="max-w-[95vw] max-h-[95vh] p-2 sm:p-6">
+          <DialogContent className="max-w-[95vw] max-h-[95vh] p-2 sm:p-6 animate-scale-in">
             {selectedImage && (
               <img
                 src={selectedImage}
                 alt="Imagem ampliada"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain animate-fade-in"
               />
             )}
           </DialogContent>
