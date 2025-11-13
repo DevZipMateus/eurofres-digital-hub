@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -9,7 +9,6 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import Autoplay from "embla-carousel-autoplay";
 
 import brocas from "@/assets/gallery/brocas.jpg";
 import entrada from "@/assets/gallery/entrada.jpg";
@@ -36,17 +35,16 @@ const galleryImages = [
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [api, setApi] = useState<CarouselApi>();
-  
-  const autoplayPlugin = useRef(
-    Autoplay({ 
-      delay: 3000, 
-      stopOnInteraction: false,
-      stopOnMouseEnter: false 
-    })
-  );
 
+  // Auto-scroll implementation
   useEffect(() => {
     if (!api) return;
+
+    const intervalId = setInterval(() => {
+      api.scrollNext();
+    }, 3000);
+
+    return () => clearInterval(intervalId);
   }, [api]);
 
   return (
@@ -68,7 +66,6 @@ const Gallery = () => {
               align: "start",
               loop: true,
             }}
-            plugins={[autoplayPlugin.current]}
             className="w-full"
           >
             <CarouselContent>
