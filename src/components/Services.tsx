@@ -1,5 +1,7 @@
 import { Cog, Package, Wrench, Sparkles } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import afiacao from "@/assets/gallery/afiacao.jpg";
+import maquinaAfiacao from "@/assets/gallery/maquina-afiacao.jpg";
 
 const Services = () => {
   const services = [
@@ -80,6 +82,23 @@ const Services = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mt-10 sm:mt-12 animate-fade-up">
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src={afiacao} 
+                alt="Processo de afiação de precisão" 
+                className="w-full h-64 sm:h-80 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src={maquinaAfiacao} 
+                alt="Máquina de afiação especializada" 
+                className="w-full h-64 sm:h-80 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
           </div>
 
           <div className="mt-12 sm:mt-16 bg-gradient-to-r from-primary to-primary/90 rounded-2xl p-6 sm:p-8 lg:p-12 text-center animate-fade-up">
