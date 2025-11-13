@@ -17,29 +17,29 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center mb-12 sm:mb-16">
-            <div className="space-y-5 sm:space-y-6 animate-slide-in">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-start mb-10 sm:mb-12 md:mb-16">
+            <div className="space-y-4 sm:space-y-5 md:space-y-6 animate-slide-in">
               <p className="text-foreground leading-relaxed text-sm sm:text-base">
                 Desde o ano 2000, a <span className="font-semibold text-primary">Eurofres</span> tem sua história marcada por dedicação, inovação e crescimento contínuo. Fundada pelo engenheiro Rodrigo Dias Brigide em Santo André, a partir de um pequeno salão de apenas 30 metros quadrados, a empresa nasceu do desejo de realizar um sonho próprio e de oferecer soluções de alta qualidade em afiação de ferramentas para os setores metalúrgico e moveleiro.
               </p>
               <p className="text-foreground leading-relaxed text-sm sm:text-base">
                 Iniciando suas operações com apenas uma máquina de afiar serras, a Eurofres enfrentou os desafios comuns de uma empresa em recém-expansão, apoiada por uma experiência sólida na área de ferramentas de corte. Essa trajetória de aprendizado e aperfeiçoamento possibilitou conquistas importantes, incluindo, em 2002, a mudança para um prédio maior.
               </p>
-              <div className="rounded-xl overflow-hidden shadow-lg">
+              <div className="rounded-xl overflow-hidden shadow-lg mt-4">
                 <img 
                   src={entrada} 
                   alt="Fachada Eurofres" 
-                  className="w-full h-64 sm:h-80 object-cover"
+                  className="w-full h-48 sm:h-64 md:h-72 lg:h-80 object-cover"
                 />
               </div>
             </div>
             
-            <div className="space-y-5 sm:space-y-6 animate-fade-up">
-              <div className="rounded-xl overflow-hidden shadow-lg mb-5">
+            <div className="space-y-4 sm:space-y-5 md:space-y-6 animate-fade-up">
+              <div className="rounded-xl overflow-hidden shadow-lg">
                 <img 
                   src={maquinarioCnc} 
                   alt="Maquinário CNC de precisão" 
-                  className="w-full h-64 sm:h-80 object-cover"
+                  className="w-full h-48 sm:h-64 md:h-72 lg:h-80 object-cover"
                 />
               </div>
               <p className="text-foreground leading-relaxed text-sm sm:text-base">

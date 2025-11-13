@@ -66,56 +66,56 @@ const Products = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-12 animate-fade-up">
-            <div className="rounded-xl overflow-hidden shadow-lg group">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-10 md:mb-12 animate-fade-up">
+            <div className="rounded-lg md:rounded-xl overflow-hidden shadow-lg group">
               <img 
                 src={discoSerraCompleto} 
                 alt="Disco de serra circular completo" 
-                className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-40 sm:h-48 md:h-52 lg:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="rounded-xl overflow-hidden shadow-lg group">
+            <div className="rounded-lg md:rounded-xl overflow-hidden shadow-lg group">
               <img 
                 src={serraCircular} 
                 alt="Detalhe da serra circular" 
-                className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-40 sm:h-48 md:h-52 lg:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="rounded-xl overflow-hidden shadow-lg group">
+            <div className="rounded-lg md:rounded-xl overflow-hidden shadow-lg group">
               <img 
                 src={conjuntoFresas} 
                 alt="Conjunto de fresas variadas" 
-                className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-40 sm:h-48 md:h-52 lg:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="rounded-xl overflow-hidden shadow-lg group">
+            <div className="rounded-lg md:rounded-xl overflow-hidden shadow-lg group">
               <img 
                 src={brocas} 
                 alt="Brocas de precisão" 
-                className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-40 sm:h-48 md:h-52 lg:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
           </div>
 
-          <div className="bg-secondary/50 rounded-2xl p-6 sm:p-8 lg:p-12 animate-fade-up">
+          <div className="bg-secondary/50 rounded-xl md:rounded-2xl p-5 sm:p-6 md:p-8 lg:p-12 animate-fade-up">
             <div className="max-w-4xl mx-auto text-center">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground mb-3 sm:mb-4 px-4">
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3 sm:mb-4 px-2 sm:px-4">
                 Catálogo completo disponível
               </h3>
-              <p className="text-muted-foreground text-base sm:text-lg mb-5 sm:mb-6 px-4">
+              <p className="text-muted-foreground text-sm sm:text-base md:text-lg mb-4 sm:mb-5 md:mb-6 px-2 sm:px-4 leading-relaxed">
                 Oferecemos uma extensa linha de produtos para atender todas as necessidades do setor industrial, desde ferramentas básicas até soluções avançadas para máquinas CNC. Entre em contato para conhecer nosso catálogo completo e receber orientação técnica especializada.
               </p>
-              <div className="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground">
-                <span className="px-3 sm:px-4 py-2 bg-background rounded-full border border-border">
+              <div className="flex flex-wrap justify-center gap-2 text-xs sm:text-sm text-muted-foreground px-2">
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-background rounded-full border border-border">
                   Produtos originais
                 </span>
-                <span className="px-3 sm:px-4 py-2 bg-background rounded-full border border-border">
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-background rounded-full border border-border">
                   Pronta entrega
                 </span>
-                <span className="px-3 sm:px-4 py-2 bg-background rounded-full border border-border">
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-background rounded-full border border-border">
                   Garantia de qualidade
                 </span>
-                <span className="px-3 sm:px-4 py-2 bg-background rounded-full border border-border">
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-background rounded-full border border-border">
                   Suporte técnico
                 </span>
               </div>
