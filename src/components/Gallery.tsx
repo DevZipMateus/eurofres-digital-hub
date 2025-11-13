@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -36,6 +36,14 @@ const galleryImages = [
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [api, setApi] = useState<CarouselApi>();
+  
+  const autoplayPlugin = useRef(
+    Autoplay({ 
+      delay: 3000, 
+      stopOnInteraction: false,
+      stopOnMouseEnter: false 
+    })
+  );
 
   useEffect(() => {
     if (!api) return;
@@ -60,13 +68,7 @@ const Gallery = () => {
               align: "start",
               loop: true,
             }}
-            plugins={[
-              Autoplay({
-                delay: 3000,
-                stopOnInteraction: false,
-                stopOnMouseEnter: false,
-              }),
-            ]}
+            plugins={[autoplayPlugin.current]}
             className="w-full"
           >
             <CarouselContent>
